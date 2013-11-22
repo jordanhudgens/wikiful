@@ -21,6 +21,7 @@ for i in 0..49
 
         # randomly assign one of the categories we just created 
         category = Category.first(offset: rand(Category.count)) 
-        a = Article.create(title: title, content: content, categories: [category,])
+        a = Article.create(title: title, content: content, categories: [category])
 end
+
 
