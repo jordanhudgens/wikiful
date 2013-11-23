@@ -1,1 +1,17 @@
 <h1>This is the index view from Articles</h1>
+
+<!-- starts a for each loop that iterates through the db -->
+<% @articles.each do |article| %>
+  <div>
+    <h3><%= article.title %></h3>
+      <p>Published on <%= article.created_at.strftime('%b %d, %Y') %></p>
+
+	<!-- runs a nested for each loop that iterates through categories -->
+    <p>Filed under: <% article.categories.each do |category| %>
+			<%= category.name %>&nbsp;
+			<% end %>
+    </p>
+    <p><%= truncate(article.content, length: 200) %></p>
+  </div>
+<% end %>
+
