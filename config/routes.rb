@@ -1,5 +1,7 @@
 Wikiful::Application.routes.draw do
 
+  get "categories/index"
+  get "categories_controller/index"
   get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -9,6 +11,9 @@ Wikiful::Application.routes.draw do
   # after creating the resources entry, you need to add a view
   resources :articles
 	
+  # this resource is for the category index
+  resources :categories
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
