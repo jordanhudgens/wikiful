@@ -46,3 +46,9 @@ end
 
 # faker for seed data
 gem 'faker'
+
+# bootstrap framework gem
+gem 'twitter-bootstrap-rails'
+gem 'less-rails'
+gem 'therubyracer'
+
