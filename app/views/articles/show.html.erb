@@ -1,9 +1,8 @@
-<h2>This the view for the show view</h3>
 <div>
   <h1><%= @article.title %></h1>
-    <p>Published <%= @article.created_at.strftime('%b %d, %Y') %></p>
+    <em>Published <%= @article.created_at.strftime('%b %d, %Y') %></em>
     <p>Filed under: <% @article.categories.each do |category| %>
-      <%= category.name %>&nbsp;<% end %>
+        <span id="category-link" class="label label-primary"><%= link_to category.name, category %>&nbsp;<% end %></span>
     </p>
-    <div><%= @article.content %>
+    <div><%= @article.content %></div>
 </div>

@@ -6,15 +6,15 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-    <div class="navbar navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
                 <%= link_to "Wikiful", root_path, :class => "brand" %>
-                <div style="float: right;">Eventually log in/out and sign up links will go here</div>
+                <div id='navlinkright'><p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link navbar-right">John Smith</a></p></div>
             </div>
         </div>
     </div>

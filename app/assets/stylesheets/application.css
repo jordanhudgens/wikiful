@@ -11,3 +11,18 @@
  *= require_self
  *= require_tree .
  */
+
+/* this fixes the form issue where the page moves to the left */
+form#new_article,
+form#new_article .form-actions {
+    margin-bottom:0px;
+}
+
+#category-link a {
+    color: white;
+    font-weight: normal;
+}
+
+#navlinkright {
+    float: right;
+}
