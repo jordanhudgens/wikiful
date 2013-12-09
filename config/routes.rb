@@ -1,5 +1,7 @@
 Wikiful::Application.routes.draw do
 
+  resources :users
+
   get "categories/index"
   get "categories_controller/index"
   get "welcome/index"
