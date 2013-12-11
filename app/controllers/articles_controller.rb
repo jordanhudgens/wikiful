@@ -3,6 +3,8 @@
 
 class ArticlesController < ApplicationController
   
+  before_filter :authorize, only: [:new]
+
   # this index method queries the psql db table
   def index
     @articles = Article.order(updated_at: :desc).limit(25)

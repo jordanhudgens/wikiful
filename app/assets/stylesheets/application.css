@@ -26,3 +26,9 @@ form#new_article .form-actions {
 #navlinkright {
     float: right;
 }
+
+#session-buttons {
+    float:right;
+    color: white;
+    margin-top:5px;
+}

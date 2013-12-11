@@ -14,7 +14,17 @@
         <div class="navbar-inner">
             <div class="container">
                 <%= link_to "Wikiful", root_path, :class => "brand" %>
-                <div id='navlinkright'><p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link navbar-right">John Smith</a></p></div>
+                    <div id="session-buttons" class="session-controls">
+                        <% if current_user %>
+                            Logged in as <%= current_user.email %>
+                            <%= link_to "Log Out", logout_path, :class => 'btn btn-primary btn-mini' %>
+                        <% else %>
+                        <div class="btn-group">
+                            <%= link_to "Sign Up", signup_path, :class => "btn btn-mini" %>
+                            <%= link_to "Log In", login_path, :class => "btn btn-mini" %>
+                        </div>
+                        <% end %>
+                    </div>
             </div>
         </div>
     </div>
